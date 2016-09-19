@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>流式布局</title>
+		<style>
+		/*百分比大小是相对于父级元素的大小*/
+		/*body的父级是html, 
+		 html往上是document，document的大小就是浏览器窗口的大小
+		 * */
+			html, body {
+				height: 100%;
+				font-size: 18px;
+			}
+			.div1 {
+				width: 25%;
+				height: 40%;
+				/*最大阈值*/
+				max-width: 400px;
+				max-height: 400px;
+				/*最小阈值*/
+				min-width: 200px;
+				min-height: 200px;
+				background: red;
+				font-size: 20px;
+			}
+			.div1 p {
+				width: 50%;
+				height: 50%;
+				background: yellow;
+				/*字体大小是可以继承的 标准浏览器默认字体大小16px 最低支持到12px*/
+				/*em 相对于父级字体大小*/
+				/*font-size: 2em;*/ 
+				/*rem 就是相对于html的字体 1rem就是html字体的大小的1倍*/
+				/*rem 多用于移动端*/
+				font-size: 2rem;
+			}
+		</style>
+	</head>
+	
+	<body>
+			<!--流式布局：也叫 百分比布局-->
+			
+			<div class="div1">
+				<p>这是一段文字</p>
+			</div>
+		
+	</body>
+</html>
